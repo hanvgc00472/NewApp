@@ -7,5 +7,6 @@ target 'NewDevelopmentApp' do
 
   # Pods for NewDevelopmentApp
 pod 'AppCenter'
+pod 'AppCenter/Distribute'
 ######
 end
