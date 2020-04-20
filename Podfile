@@ -6,5 +6,5 @@ target 'NewDevelopmentApp' do
   use_frameworks!
 
   # Pods for NewDevelopmentApp
-
+pod 'AppCenter'
 end
