@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         print("ACB")
         print("ABB")
         print("XYZZZZ")
+        
+        self.view.backgroundColor = .red
     }
 
 
