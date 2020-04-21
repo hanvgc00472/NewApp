@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
     }
     func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
         MSDistribute.notify(.update)
-        return
+     return true;
 //        
 //        
         
@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
      
       // Show the alert controller.
       self.window?.rootViewController?.present(alertController, animated: true)
-      return true;
+     
     }
  
    
