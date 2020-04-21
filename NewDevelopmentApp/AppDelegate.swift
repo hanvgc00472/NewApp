@@ -21,11 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
         // Override point for customization after application launch
         MSDistribute.setDelegate(self);
         MSDistribute.checkForUpdate()
-//        MSDistribute.setEnabled(true)
-
+       
         MSDistribute.updateTrack = MSUpdateTrack.public
 
-//        MSDistribute.checkForUpdate()
+        MSDistribute.checkForUpdate()
         MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices:[
           MSAnalytics.self,
           MSCrashes.self,
@@ -33,28 +32,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
         ])
         
                 var enabled = MSDistribute.isEnabled()
+
         #if DEBUG
-           MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+           MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self])
         #else
-           MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
+           MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
         #endif
         return true
     }
     func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
-
+ 
+        
       // Your code to present your UI to the user, e.g. an UIAlertController.
       let alertController = UIAlertController(title: "Update available.",
                                             message: "Do you want to update?",
                                      preferredStyle:.alert)
 
-      alertController.addAction(UIAlertAction(title: "Update", style: .cancel) {_ in
+        alertController.addAction(UIAlertAction(title: "Update", style: .cancel) {_ in
         MSDistribute.notify(.update)
       })
-
-      alertController.addAction(UIAlertAction(title: "Postpone", style: .default) {_ in
-        MSDistribute.notify(.postpone)
-      })
-
+        alertController.addAction(UIAlertAction(title: "Later", style: .default) {_ in
+             MSDistribute.notify(.postpone)
+           })
+     
       // Show the alert controller.
       self.window?.rootViewController?.present(alertController, animated: true)
       return true;

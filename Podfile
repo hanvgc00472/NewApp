@@ -8,5 +8,6 @@ target 'NewDevelopmentApp' do
   # Pods for NewDevelopmentApp
 pod 'AppCenter'
 pod 'AppCenter/Distribute'
+pod 'FTIndicator', '~> 1.2.9'
 ######
 end
