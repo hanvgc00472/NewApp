@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
        
         MSDistribute.updateTrack = MSUpdateTrack.public
 
-//        MSDistribute.checkForUpdate()
+        MSDistribute.checkForUpdate()
         MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices:[
           MSAnalytics.self,
           MSCrashes.self,
@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
         alertController.addAction(UIAlertAction(title: "Update", style: .cancel) {_ in
         MSDistribute.notify(.update)
       })
-        alertController.addAction(UIAlertAction(title: "Update", style: .default) {_ in
+        alertController.addAction(UIAlertAction(title: "Later", style: .default) {_ in
              MSDistribute.notify(.postpone)
            })
      
