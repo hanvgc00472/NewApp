@@ -39,8 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
         return true
     }
     func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
-//        MSDistribute.notify(.update)
-//        return
+        MSDistribute.notify(.update)
+        return
 //        
 //        
         
