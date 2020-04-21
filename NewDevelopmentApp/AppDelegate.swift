@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
           MSCrashes.self,
           MSDistribute.self
         ])
+        
                 var enabled = MSDistribute.isEnabled()
         #if DEBUG
            MSAppCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
