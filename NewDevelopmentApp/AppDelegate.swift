@@ -39,7 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
         return true
     }
     func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
-
+        MSDistribute.notify(.update)
+        return
+        
+        
+        
       // Your code to present your UI to the user, e.g. an UIAlertController.
       let alertController = UIAlertController(title: "Update available.",
                                             message: "Do you want to update?",
