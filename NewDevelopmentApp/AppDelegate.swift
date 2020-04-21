@@ -24,13 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
        
         MSDistribute.updateTrack = MSUpdateTrack.public
 
-        MSDistribute.checkForUpdate()
+//        MSDistribute.checkForUpdate()
         MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices:[
           MSAnalytics.self,
           MSCrashes.self,
           MSDistribute.self
         ])
-                var enabled = MSDistribute.isEnabled()
+//                var enabled = MSDistribute.isEnabled()
         #if DEBUG
            MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self])
         #else
@@ -39,10 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
         return true
     }
     func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
-//        MSDistribute.notify(.update)
-//        return
-//        
-//        
+ 
         
       // Your code to present your UI to the user, e.g. an UIAlertController.
       let alertController = UIAlertController(title: "Update available.",
@@ -52,7 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
         alertController.addAction(UIAlertAction(title: "Update", style: .cancel) {_ in
         MSDistribute.notify(.update)
       })
-
+        alertController.addAction(UIAlertAction(title: "Update", style: .default) {_ in
+             MSDistribute.notify(.postpone)
+           })
      
       // Show the alert controller.
       self.window?.rootViewController?.present(alertController, animated: true)
