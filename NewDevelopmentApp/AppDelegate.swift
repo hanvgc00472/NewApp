@@ -21,10 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
         // Override point for customization after application launch
         MSDistribute.setDelegate(self);
         MSDistribute.checkForUpdate()
-//
-//        MSDistribute.updateTrack = MSUpdateTrack.public
-//
-//        MSDistribute.checkForUpdate()
+       
+        MSDistribute.updateTrack = MSUpdateTrack.public
+
+        MSDistribute.checkForUpdate()
         MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices:[
           MSAnalytics.self,
           MSCrashes.self,
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
     }
     func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
 //        MSDistribute.notify(.update)
-//     return true;
+//        return
 //        
 //        
         
