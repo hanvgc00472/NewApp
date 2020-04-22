@@ -25,13 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
 //
         MSDistribute.updateTrack = MSUpdateTrack.public
 //              MSDistribute.checkForUpdate()
-        MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSDistribute.self])
+//        MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSDistribute.self])
 ////                var enabled = MSDistribute.isEnabled()
-//        #if DEBUG
-//           MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self])
-//        #else
-//           MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
-//        #endif
+        #if DEBUG
+           MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self])
+        #else
+           MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
+        #endif
 
         return true
     }
