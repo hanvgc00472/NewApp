@@ -24,21 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
            MSDistribute.checkForUpdate()
        
         MSDistribute.updateTrack = MSUpdateTrack.public
-
+        var enabled = MSDistribute.isEnabled()
 //        MSDistribute.checkForUpdate()
         MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices:[
           MSAnalytics.self,
           MSCrashes.self,
           MSDistribute.self
         ])
-        
-//                var enabled = MSDistribute.isEnabled()
-//
-//        #if DEBUG
-//           MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self])
-//        #else
-//           MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
-//        #endif
+
         return true
     }
     func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
