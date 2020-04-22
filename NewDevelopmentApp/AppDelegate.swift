@@ -19,23 +19,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MSDistributeDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch
-        MSDistribute.setDelegate(self);
-        MSDistribute.checkForUpdate()
+     
+        MSDistribute.setDelegate(self)
+           MSDistribute.checkForUpdate()
        
         MSDistribute.updateTrack = MSUpdateTrack.public
+<<<<<<< HEAD
 
+=======
+        var enabled = MSDistribute.isEnabled()
+>>>>>>> 11160db0cd4a4426bbcfea067c775efccabf001c
 //        MSDistribute.checkForUpdate()
         MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices:[
           MSAnalytics.self,
           MSCrashes.self,
           MSDistribute.self
         ])
+<<<<<<< HEAD
                 var enabled = MSDistribute.isEnabled()
         #if DEBUG
            MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self])
         #else
            MSAppCenter.start("1cb21983-1bbe-4d23-93d5-4e528e0f1c49", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
         #endif
+=======
+
+>>>>>>> 11160db0cd4a4426bbcfea067c775efccabf001c
         return true
     }
     func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
