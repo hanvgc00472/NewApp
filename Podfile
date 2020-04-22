@@ -4,7 +4,7 @@
 target 'NewDevelopmentApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+ pod 'FTIndicator', '~> 1.2.9'
   # Pods for NewDevelopmentApp
 pod 'AppCenter'
 pod 'AppCenter/Distribute'

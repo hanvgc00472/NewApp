@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         print("XYZZZZ")
         
         self.view.backgroundColor = .green
-
-      
+            
+        FTIndicator.showSuccess(withMessage: "Hello I'm here!!")
     }
 
 
