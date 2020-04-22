@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,7 +22,6 @@
 		45FBAAC265FEB60924B5C235 /* Pods-NewDevelopmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewDevelopmentApp.debug.xcconfig"; path = "Target Support Files/Pods-NewDevelopmentApp/Pods-NewDevelopmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		92FA89F937CEE7A456993B55 /* Pods-NewDevelopmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewDevelopmentApp.release.xcconfig"; path = "Target Support Files/Pods-NewDevelopmentApp/Pods-NewDevelopmentApp.release.xcconfig"; sourceTree = "<group>"; };
 		B745265B244D643C00414FC3 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B745265D244E911800414FC3 /* NewDevelopmentApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewDevelopmentApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		B7C94C16244D4E3900AC3129 /* NewDevelopmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewDevelopmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C94C19244D4E3900AC3129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7C94C1B244D4E3900AC3129 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +90,6 @@
 				B7C94C22244D4E3B00AC3129 /* Assets.xcassets */,
 				B7C94C24244D4E3B00AC3129 /* LaunchScreen.storyboard */,
 				B7C94C27244D4E3B00AC3129 /* Info.plist */,
-				B745265D244E911800414FC3 /* NewDevelopmentApp-Bridging-Header.h */,
 			);
 			path = NewDevelopmentApp;
 			sourceTree = "<group>";
@@ -108,7 +106,6 @@
 				B7C94C13244D4E3900AC3129 /* Frameworks */,
 				B7C94C14244D4E3900AC3129 /* Resources */,
 				62547444835A7582E714C452 /* [CP] Copy Pods Resources */,
-				54BBD23152426BAFC0C0A375 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,7 +128,6 @@
 				TargetAttributes = {
 					B7C94C15244D4E3900AC3129 = {
 						CreatedOnToolsVersion = 11.4;
-						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -168,23 +164,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		54BBD23152426BAFC0C0A375 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NewDevelopmentApp/Pods-NewDevelopmentApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NewDevelopmentApp/Pods-NewDevelopmentApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewDevelopmentApp/Pods-NewDevelopmentApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		62547444835A7582E714C452 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,7 +357,6 @@
 			baseConfigurationReference = 45FBAAC265FEB60924B5C235 /* Pods-NewDevelopmentApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = SNBNU32XKK;
@@ -391,8 +369,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.netfin.pushcodeapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = PushCodeAdHoc;
-				SWIFT_OBJC_BRIDGING_HEADER = "NewDevelopmentApp/NewDevelopmentApp-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -403,7 +379,6 @@
 			baseConfigurationReference = 92FA89F937CEE7A456993B55 /* Pods-NewDevelopmentApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = SNBNU32XKK;
@@ -416,7 +391,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vn.netfin.pushcodeapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = PushCodeAdHoc;
-				SWIFT_OBJC_BRIDGING_HEADER = "NewDevelopmentApp/NewDevelopmentApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -17,10 +17,11 @@ class ViewController: UIViewController {
         print("ABB")
         print("XYZZZZ")
         
-        self.view.backgroundColor = .red
-        
-        FTIndicator.showSuccess(withMessage: "Thành công thành công......", userInteractionEnable: true)
+        self.view.backgroundColor = .yellow
+
+      
     }
+
 
 }
 
