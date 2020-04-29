@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         print("ABB")
         
         
-        self.view.backgroundColor = .gray
+        self.view.backgroundColor = .yellow
             
         FTIndicator.showSuccess(withMessage: "Hello I'm here!!")
     }
